@@ -1,7 +1,7 @@
 {
   "app-id": "com.flashforge.FlashPrint",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.9",
+  "runtime-version": "5.13",
   "sdk": "org.kde.Sdk",
   "command": "FlashPrint",
   "tags": [
@@ -10,7 +10,8 @@
   "finish-args": [
     "--filesystem=home",
     "--socket=x11",
-    "--device=dri",
+    "--device=all",
+    "--share=network",
     "--share=ipc"
   ],
   "cleanup": [
@@ -19,20 +20,60 @@
     "/share/pkgconfig"
   ],
   "modules": [
+    "shared-modules/glu/glu-9.0.0.json",
+    {
+      "name": "libudev1",
+      "buildsystem": "autotools",
+      "sources": [{
+        "type": "archive",
+        "url": "https://github.com/gentoo/eudev/archive/v3.2.7.tar.gz",
+        "sha512": "17c1894c6e85ddcef259e3e10c21ff7f36567dec377c279cc423c14957d3de97c88aa6eb4cab7cab5ffbdbf80cc63b52af8da592bf226affd21dd9edb74203ed"
+      }]
+    },
     {
       "name": "FlashPrint",
       "buildsystem": "simple",
       "build-commands": [
-        "install -D apply_extra /app/bin/apply_extra",
-        "install -D flashprint-bin /app/bin/FlashPrint",
-        "install -Dm644 com.flashforge.FlashPrint.appdata.xml /app/share/appdata/com.flashforge.FlashPrint.appdata.xml",
-        "install -D icon.svg /app/share/icons/hicolor/scalable/apps/com.flashforge.FlashPrint.svg",
+        "install -D flashprint.sh /app/bin/FlashPrint",
         "install -D /usr/bin/ar /app/bin/ar",
         "install -D /usr/bin/desktop-file-install /app/bin/desktop-file-install",
         "mkdir -p /app/lib",
-        "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib"
+        "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib",
+        "install -Dm644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml",
+        "install -D ${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg",
+        "install -D ${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop",
+        "install -D apply_extra /app/bin/apply_extra"
       ],
-      "sources": [
+      "sources": [{
+          "type": "extra-data",
+          "filename": "flashprint.deb",
+          "only-arches": [
+            "x86_64"
+          ],
+          "url": "http://en.fss.flashforge.com/10000/software/e94ac043da923cc69137ff1b42686f9e.deb",
+          "sha256": "40fcfd4b396a9bed8615987b0e78c4a6ffd041c7822d166a142baeddfb519495",
+          "size": 13090434
+        },
+        {
+          "type": "file",
+          "path": "com.flashforge.FlashPrint.metainfo.xml"
+        },
+        {
+          "type": "file",
+          "path": "com.flashforge.FlashPrint.svg"
+        },
+        {
+          "type": "file",
+          "path": "com.flashforge.FlashPrint.desktop"
+        },
+        {
+
+          "type": "script",
+          "dest-filename": "flashprint.sh",
+          "commands": [
+            "exec /app/extra/share/FlashPrint/FlashPrint \"$@\""
+          ]
+        },
         {
           "type": "script",
           "dest-filename": "apply_extra",
@@ -40,44 +81,8 @@
             "ar p flashprint.deb data.tar.xz | tar xJ",
             "rm -f flashprint.deb",
             "mv usr/* .",
-            "rmdir usr",
-            "mv share/applications/FlashPrint.desktop share/applications/com.flashforge.FlashPrint.desktop",
-            "desktop-file-install --dir=export/share/applications --set-key=Exec --set-value=/app/bin/FlashPrint --set-icon=com.flashforge.FlashPrint share/applications/com.flashforge.FlashPrint.desktop"
+            "rmdir usr"
           ]
-        },
-        {
-          "type": "extra-data",
-          "filename": "flashprint.deb",
-          "only-arches": [
-            "x86_64"
-          ],
-          "url": "http://www.sz3dp.com/upfile/2018/12/03/20181203162713_662.deb",
-          "sha256": "2bb003b7bb552dd6b04495a084d1bf03de620bb94dea44f3b6909516f4a95dc1",
-          "size": 12717922
-        },
-        {
-          "type": "file",
-          "path": "com.flashforge.FlashPrint.appdata.xml"
-        },
-        {
-          "type": "file",
-          "path": "flashprint-bin"
-        },
-        {
-          "type": "file",
-          "path": "icon.svg"
-        }
-      ]
-    },
-    "shared-modules/glu/glu-9.0.0.json",
-    {
-      "name": "libudev1",
-      "buildsystem": "autotools",
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://github.com/gentoo/eudev/archive/v3.2.7.tar.gz",
-          "sha512": "17c1894c6e85ddcef259e3e10c21ff7f36567dec377c279cc423c14957d3de97c88aa6eb4cab7cab5ffbdbf80cc63b52af8da592bf226affd21dd9edb74203ed"
         }
       ]
     }
