@@ -20,7 +20,7 @@
     "/share/pkgconfig"
   ],
   "modules": [
-    "shared-modules/glu/glu-9.0.0.json",
+    "shared-modules/glu/glu-9.json",
     {
       "name": "libudev1",
       "buildsystem": "autotools",
@@ -50,9 +50,9 @@
           "only-arches": [
             "x86_64"
           ],
-          "url": "http://en.fss.flashforge.com/10000/software/e94ac043da923cc69137ff1b42686f9e.deb",
-          "sha256": "40fcfd4b396a9bed8615987b0e78c4a6ffd041c7822d166a142baeddfb519495",
-          "size": 13090434
+          "url": "http://en.fss.flashforge.com/10000/software/4455a73481c89c161847e1f89dd89cf2.deb",
+          "sha256": "4177d0b64c082c3b021af8ba5f8e6dc65f514e77a4af737950d008cffd48b7fe",
+          "size": 13862128
         },
         {
           "type": "file",
