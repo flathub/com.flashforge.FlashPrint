@@ -50,9 +50,9 @@
           "only-arches": [
             "x86_64"
           ],
-          "url": "http://www.ishare3d.com/3dapp/public/FlashPrint-ii/FlashPrint/flashprint_4.6.0_amd64.deb",
-          "sha256": "d8081bb2045b4f35d19849f358ed8e85d3498b0baec609b7b0fbc7273608811b",
-          "size": 13966096
+          "url": "https://en.fss.flashforge.com/10000/software/361aa4e2603599ff099e83c8c95f2426.deb",
+          "sha256": "88b014a318d25cf6b8282b02b36592e9619ceabb1fc142c58ff7b95572d3b890",
+          "size": 13956098
         },
         {
           "type": "file",
