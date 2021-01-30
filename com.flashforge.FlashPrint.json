@@ -50,9 +50,9 @@
           "only-arches": [
             "x86_64"
           ],
-          "url": "https://en.fss.flashforge.com/10000/software/387ac04a8e8ffce5045d50ff21054a8e.deb",
-          "sha256": "d8081bb2045b4f35d19849f358ed8e85d3498b0baec609b7b0fbc7273608811b",
-          "size": 13966096
+          "url": "https://en.fss.flashforge.com/10000/software/c8fe79d40a969f462ec07703bc62376f.deb",
+          "sha256": "e7afc1d96ddc2dd42ff74ed9a684399518a8d9f24b12a4660129b8cf672d3f8b",
+          "size": 13939076
         },
         {
           "type": "file",
