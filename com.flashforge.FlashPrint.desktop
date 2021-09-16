@@ -1,7 +1,7 @@
 [Desktop Entry]
 GenericName=FlashPrint
 Name=FlashForge 3D Printer Control Software
-MimeType=text/plain;
+MimeType=model/stl;
 Exec=FlashPrint
 Icon=com.flashforge.FlashPrint
 Type=Application
