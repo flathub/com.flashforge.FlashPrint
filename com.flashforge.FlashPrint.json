@@ -50,9 +50,9 @@
           "only-arches": [
             "x86_64"
           ],
-          "url": "https://en.fss.flashforge.com/10000/software/c8fe79d40a969f462ec07703bc62376f.deb",
-          "sha256": "e7afc1d96ddc2dd42ff74ed9a684399518a8d9f24b12a4660129b8cf672d3f8b",
-          "size": 13939076
+          "url": "http://www.ishare3d.com/3dapp/public/FlashPrint-5/FlashPrint/flashprint5_5.1.1_amd64.deb",
+          "sha256": "7a76438f222f8656e3f14f8e249474d316512865e40aec08ab41cae7eefef342",
+          "size": 12602542
         },
         {
           "type": "file",
@@ -71,7 +71,7 @@
           "type": "script",
           "dest-filename": "flashprint.sh",
           "commands": [
-            "exec /app/extra/share/FlashPrint/FlashPrint \"$@\""
+            "exec /app/extra/share/FlashPrint5/FlashPrint \"$@\""
           ]
         },
         {
