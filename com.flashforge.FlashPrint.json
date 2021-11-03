@@ -1,97 +1,102 @@
 {
-  "app-id": "com.flashforge.FlashPrint",
-  "runtime": "org.kde.Platform",
-  "runtime-version": "5.15",
-  "sdk": "org.kde.Sdk",
-  "command": "FlashPrint",
-  "tags": [
-    "proprietary"
-  ],
-  "finish-args": [
-    "--filesystem=home",
-    "--socket=x11",
-    "--device=all",
-    "--share=network",
-    "--share=ipc"
-  ],
-  "cleanup": [
-    "/include",
-    "/lib/pkgconfig",
-    "/share/pkgconfig"
-  ],
-  "modules": [
-    "shared-modules/glu/glu-9.json",
-    {
-      "name": "libudev1",
-      "buildsystem": "autotools",
-      "sources": [{
-        "type": "archive",
-        "url": "https://github.com/gentoo/eudev/archive/v3.2.7.tar.gz",
-        "sha512": "17c1894c6e85ddcef259e3e10c21ff7f36567dec377c279cc423c14957d3de97c88aa6eb4cab7cab5ffbdbf80cc63b52af8da592bf226affd21dd9edb74203ed"
-      }]
-    },
-    {
-      "name": "FlashPrint",
-      "buildsystem": "simple",
-      "build-commands": [
-        "install -D flashprint.sh /app/bin/FlashPrint",
-        "install -D /usr/bin/ar /app/bin/ar",
-        "install -D /usr/bin/desktop-file-install /app/bin/desktop-file-install",
-        "mkdir -p /app/lib",
-        "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib",
-        "install -Dm644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml",
-        "install -D ${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg",
-        "install -D ${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop",
-        "install -D apply_extra /app/bin/apply_extra"
-      ],
-      "sources": [{
-          "type": "extra-data",
-          "filename": "flashprint.deb",
-          "only-arches": [
-            "x86_64"
-          ],
-          "url": "http://www.ishare3d.com/3dapp/public/FlashPrint-5/FlashPrint/flashprint5_5.1.1_amd64.deb",
-          "sha256": "7a76438f222f8656e3f14f8e249474d316512865e40aec08ab41cae7eefef342",
-          "size": 12602542,
-          "x-checker-data": {
-            "type": "html",
-            "url": "http://www.ishare3d.com/3dapp/public/FlashPrint-5/appInfo1",
-            "version-pattern": "linux64Ver=([\\d\\.-]+)",
-            "url-pattern": "linux64Url=\"(.*?.deb)\"",
-            "only-arches": [ "x86_64" ]
-          }
+    "app-id": "com.flashforge.FlashPrint",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.15",
+    "sdk": "org.kde.Sdk",
+    "command": "FlashPrint",
+    "tags": [
+        "proprietary"
+    ],
+    "finish-args": [
+        "--filesystem=home",
+        "--socket=x11",
+        "--device=all",
+        "--share=network",
+        "--share=ipc"
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/share/pkgconfig"
+    ],
+    "modules": [
+        "shared-modules/glu/glu-9.json",
+        {
+            "name": "libudev1",
+            "buildsystem": "autotools",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/gentoo/eudev/archive/v3.2.7.tar.gz",
+                    "sha512": "17c1894c6e85ddcef259e3e10c21ff7f36567dec377c279cc423c14957d3de97c88aa6eb4cab7cab5ffbdbf80cc63b52af8da592bf226affd21dd9edb74203ed",
+                    "sha256": "ce2fda4dea129bbcf824c947aab23504bcd26911481b47dbaf10646f723083a4"
+                }
+            ]
         },
         {
-          "type": "file",
-          "path": "com.flashforge.FlashPrint.metainfo.xml"
-        },
-        {
-          "type": "file",
-          "path": "com.flashforge.FlashPrint.svg"
-        },
-        {
-          "type": "file",
-          "path": "com.flashforge.FlashPrint.desktop"
-        },
-        {
-
-          "type": "script",
-          "dest-filename": "flashprint.sh",
-          "commands": [
-            "exec /app/extra/share/FlashPrint5/FlashPrint \"$@\""
-          ]
-        },
-        {
-          "type": "script",
-          "dest-filename": "apply_extra",
-          "commands": [
-            "ar p flashprint.deb data.tar.xz | tar xJ",
-            "rm -f flashprint.deb",
-            "mv usr/* .",
-            "rmdir usr"
-          ]
+            "name": "FlashPrint",
+            "buildsystem": "simple",
+            "build-commands": [
+                "install -D flashprint.sh /app/bin/FlashPrint",
+                "install -D /usr/bin/ar /app/bin/ar",
+                "install -D /usr/bin/desktop-file-install /app/bin/desktop-file-install",
+                "mkdir -p /app/lib",
+                "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib",
+                "install -Dm644 ${FLATPAK_ID}.metainfo.xml /app/share/metainfo/${FLATPAK_ID}.metainfo.xml",
+                "install -D ${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg",
+                "install -D ${FLATPAK_ID}.desktop /app/share/applications/${FLATPAK_ID}.desktop",
+                "install -D apply_extra /app/bin/apply_extra"
+            ],
+            "sources": [
+                {
+                    "type": "extra-data",
+                    "filename": "flashprint.deb",
+                    "only-arches": [
+                        "x86_64"
+                    ],
+                    "url": "http://www.ishare3d.com/3dapp/public/FlashPrint-5/FlashPrint/flashprint5_5.2.0_amd64.deb",
+                    "sha256": "ae2d8ad73ed16b95c6058b8ac40d62285bb5af093b3050492fd6411d70d13269",
+                    "size": 10856124,
+                    "x-checker-data": {
+                        "type": "html",
+                        "url": "http://www.ishare3d.com/3dapp/public/FlashPrint-5/appInfo1",
+                        "version-pattern": "linux64Ver=([\\d\\.-]+)",
+                        "url-pattern": "linux64Url=\"(.*?.deb)\"",
+                        "only-arches": [
+                            "x86_64"
+                        ]
+                    }
+                },
+                {
+                    "type": "file",
+                    "path": "com.flashforge.FlashPrint.metainfo.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "com.flashforge.FlashPrint.svg"
+                },
+                {
+                    "type": "file",
+                    "path": "com.flashforge.FlashPrint.desktop"
+                },
+                {
+                    "type": "script",
+                    "dest-filename": "flashprint.sh",
+                    "commands": [
+                        "exec /app/extra/share/FlashPrint5/FlashPrint \"$@\""
+                    ]
+                },
+                {
+                    "type": "script",
+                    "dest-filename": "apply_extra",
+                    "commands": [
+                        "ar p flashprint.deb data.tar.xz | tar xJ",
+                        "rm -f flashprint.deb",
+                        "mv usr/* .",
+                        "rmdir usr"
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
