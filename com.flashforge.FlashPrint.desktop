@@ -5,5 +5,5 @@ Exec=FlashPrint %F
 Icon=com.flashforge.FlashPrint
 Type=Application
 Terminal=false
-Categories=Qt;Utility;
+Categories=Qt;Graphics;Engineering;
 Keywords=3d;Model;Print;Slicer;FlashForge;Control;FDM;PLA;Plastic;
