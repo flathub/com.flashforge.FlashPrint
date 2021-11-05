@@ -7,3 +7,4 @@ Type=Application
 Terminal=false
 Categories=Qt;Graphics;Engineering;
 Keywords=3d;Model;Print;Slicer;FlashForge;Control;FDM;PLA;Plastic;
+PrefersNonDefaultGPU=true
