@@ -1,9 +1,10 @@
 [Desktop Entry]
-GenericName=FlashPrint
-Name=FlashForge 3D Printer Control Software
-MimeType=model/stl;
+Name=FlashPrint
+MimeType=model/stl;text/x-gcode-gx;application/x-flashprint-project;
 Exec=FlashPrint %F
 Icon=com.flashforge.FlashPrint
 Type=Application
 Terminal=false
-Categories=Qt;Utility;
+Categories=Qt;Graphics;Engineering;
+Keywords=3d;Model;Print;Slicer;FlashForge;Control;FDM;PLA;Plastic;
+PrefersNonDefaultGPU=true
