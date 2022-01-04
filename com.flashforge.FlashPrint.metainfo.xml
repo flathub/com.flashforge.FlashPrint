@@ -36,6 +36,19 @@
   <icon type="remote" width="416" height="416">http://raw.githubusercontent.com/flathub/com.flashforge.FlashPrint/master/icon.png</icon>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="5.2.1" date="2022-01-04">
+      <description>
+        <ul>
+          <li>Add compensation for filament shrinkage.</li>
+          <li>Add more slicing settings for Creator 3 Pro and Creator 4.</li>
+          <li>Add the warning on Creator 4 that double extruder printing out of range.</li>
+          <li>Support setting the cooling fan speed for GuiderII S.</li>
+          <li>Add more new example files.</li>
+          <li>Fix the issue that Z axis compensation failure.</li>
+          <li>Other function optimization and bug modification.</li>
+        </ul>
+      </description>
+    </release>
     <release version="5.2.0" date="2021-11-01">
       <description>
         <ul>
