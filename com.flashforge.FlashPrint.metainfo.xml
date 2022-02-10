@@ -36,6 +36,18 @@
   <icon type="remote" width="416" height="416">http://raw.githubusercontent.com/flathub/com.flashforge.FlashPrint/master/icon.png</icon>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="5.3.0" date="2022-02-10">
+      <description>
+        <ul>
+          <li>Add Polish Selection.</li>
+          <li>Add more slicing settings for Creator 4.</li>
+          <li>Modify the material shrinkage compensation parameters.</li>
+          <li>Support setting the parameters related to the shell printing order and the shell starting point.</li>
+          <li>Add the nozzle size selection function in the slicing screen.</li>
+          <li>Other function optimization and bug modification.</li>
+        </ul>
+      </description>
+    </release>
     <release version="5.2.1" date="2022-01-04">
       <description>
         <ul>
