@@ -9,6 +9,7 @@
     ],
     "finish-args": [
         "--filesystem=home",
+        "--filesystem=xdg-run/gvfs",
         "--socket=x11",
         "--device=all",
         "--share=network",
