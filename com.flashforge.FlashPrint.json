@@ -65,7 +65,7 @@
                         "type": "html",
                         "url": "http://www.ishare3d.com/3dapp/public/FlashPrint-5/appInfo1",
                         "version-pattern": "linux64Ver=([\\d\\.-]+)",
-                        "url-pattern": "linux64Url=\"(.*?.deb)\"",
+                        "url-template": "FlashPrint/flashprint${major}_${version}_amd64.deb",
                         "only-arches": [
                             "x86_64"
                         ]
