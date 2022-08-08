@@ -36,6 +36,29 @@
   <icon type="remote" width="416" height="416">http://raw.githubusercontent.com/flathub/com.flashforge.FlashPrint/master/icon.png</icon>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="5.4.1" date="2022-08-08">
+      <description>
+        <ul>
+          <li>Fix the extruder temperature setup error bug when printing in copy and mirror mode</li>
+          <li>Add more slicing settings for Creator 4</li>
+          <li>Other function optimization and bug modification</li>
+        </ul>
+      </description>
+    </release>
+    <release version="5.4.0" date="2022-07-15">
+      <description>
+        <ul>
+          <li>Support setting the font size</li>
+          <li>Support setting the color theme</li>
+          <li>Support manual designation of the extruder for printing partial support in the support interface</li>
+          <li>Support viewing the text content of Gcode during slicing preview</li>
+          <li>Support drawing a translucent nozzle during slicing preview, making it convenient for viewing the current path location</li>
+          <li>The customized material slicing configuration supports setting the material name and material density (for weight estimation)</li>
+          <li>Add the function of model gallery</li>
+          <li>Other function optimization and bug modification</li>
+        </ul>
+      </description>
+    </release>
     <release version="5.3.4" date="2022-06-02">
       <description>
         <ul>
