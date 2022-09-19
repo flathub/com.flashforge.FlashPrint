@@ -36,6 +36,17 @@
   <icon type="remote" width="416" height="416">http://raw.githubusercontent.com/flathub/com.flashforge.FlashPrint/master/icon.png</icon>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="5.5.0" date="2022-09-19">
+      <description>
+        <ul>
+          <li>Add a new machine model: Guider 3 Plus</li>
+          <li>Update the default slicing parameters of Creator 4</li>
+          <li>Fix the bug of abnormal print path when adding support in the mode of printing models one by one</li>
+          <li>Fix the bug that the linear support cannot be added from the build plate</li>
+          <li>Other function optimization and bug modification</li>
+        </ul>
+      </description>
+    </release>
     <release version="5.4.1" date="2022-08-08">
       <description>
         <ul>
