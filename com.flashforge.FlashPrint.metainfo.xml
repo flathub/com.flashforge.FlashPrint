@@ -36,6 +36,17 @@
   <icon type="remote" width="416" height="416">http://raw.githubusercontent.com/flathub/com.flashforge.FlashPrint/master/icon.png</icon>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="5.5.1" date="2022-10-28">
+      <description>
+        <ul>
+          <li></li>
+          <li>Add some slicing configurations of Guider 3 Plus and Creator 4</li>
+          <li>Optimize the display color of the model</li>
+          <li>Optimize the video monitoring function and improve the fluency</li>
+          <li>Other function optimization and bug modification</li>
+        </ul>
+      </description>
+    </release>
     <release version="5.5.0" date="2022-09-19">
       <description>
         <ul>
