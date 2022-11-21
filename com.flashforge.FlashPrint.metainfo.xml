@@ -49,7 +49,6 @@
     <release version="5.5.1" date="2022-10-28">
       <description>
         <ul>
-          <li/>
           <li>Add some slicing configurations of Guider 3 Plus and Creator 4</li>
           <li>Optimize the display color of the model</li>
           <li>Optimize the video monitoring function and improve the fluency</li>
