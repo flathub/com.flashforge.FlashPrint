@@ -36,10 +36,20 @@
   <icon type="remote" width="416" height="416">http://raw.githubusercontent.com/flathub/com.flashforge.FlashPrint/master/icon.png</icon>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="5.5.2" date="2022-11-18">
+      <description>
+        <ul>
+          <li>Add a new machine type: Guider 3</li>
+          <li>Update the slicing configuration of Guider 3 Plus and Creator 4</li>
+          <li>Fix the bug of video surveillance of Adventurer 3 and Adventurer 4</li>
+          <li>Other function optimization and bug modification</li>
+        </ul>
+      </description>
+    </release>
     <release version="5.5.1" date="2022-10-28">
       <description>
         <ul>
-          <li></li>
+          <li/>
           <li>Add some slicing configurations of Guider 3 Plus and Creator 4</li>
           <li>Optimize the display color of the model</li>
           <li>Optimize the video monitoring function and improve the fluency</li>
