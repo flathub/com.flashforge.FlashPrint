@@ -36,6 +36,16 @@
   <icon type="remote" width="416" height="416">http://raw.githubusercontent.com/flathub/com.flashforge.FlashPrint/master/icon.png</icon>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="5.6.0" date="2023-02-08">
+      <description>
+        <ul>
+          <li>Update the slicing configurations of Guide 3, Guider 3 Plus and Creator 4.</li>
+          <li>Support loading files in STEP and STP formats.</li>
+          <li>Automatically reconnect the printer after communication is disconnected.</li>
+          <li>Other function optimization and bug modification.</li>
+        </ul>
+      </description>
+    </release>
     <release version="5.5.2" date="2022-11-18">
       <description>
         <ul>

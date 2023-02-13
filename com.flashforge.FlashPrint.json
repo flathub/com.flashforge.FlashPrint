@@ -58,9 +58,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "http://www.ishare3d.com/3dapp/public/FlashPrint-5/FlashPrint/flashprint5_5.5.2_amd64.deb",
-                    "sha256": "6ae24fedf97c68955dfdc9651766c31d3be5faab91e434391e06fbbf6753f1fb",
-                    "size": 12055272,
+                    "url": "http://www.ishare3d.com/3dapp/public/FlashPrint-5/FlashPrint/flashprint5_5.6.0_amd64.deb",
+                    "sha256": "983592719e819835a060c9e4e82bf9338f587b913a96a54aa23309ce69d61de5",
+                    "size": 24962904,
                     "x-checker-data": {
                         "type": "html",
                         "url": "http://www.ishare3d.com/3dapp/public/FlashPrint-5/appInfo1",
@@ -91,7 +91,7 @@
                     "type": "script",
                     "dest-filename": "flashprint.sh",
                     "commands": [
-                        "exec /app/extra/share/FlashPrint5/FlashPrint \"$@\""
+                        "LD_LIBRARY_PATH=/app/extra/lib/ exec /app/extra/share/FlashPrint5/FlashPrint \"$@\""
                     ]
                 },
                 {
