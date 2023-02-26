@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=FlashPrint
-MimeType=model/stl;text/x-gcode-gx;application/x-flashprint-project;model/3mf;application/vnd.ms-3mfdocument;model/step;model/step+xml;model/step+zip;model/step-xml+zip;
+MimeType=model/stl;text/x-gcode-gx;application/x-flashprint-project;model/3mf;application/vnd.ms-3mfdocument;model/step;model/step+xml;model/step+zip;model/step-xml+zip;model/obj;
 Exec=FlashPrint %F
 Icon=com.flashforge.FlashPrint
 Type=Application
