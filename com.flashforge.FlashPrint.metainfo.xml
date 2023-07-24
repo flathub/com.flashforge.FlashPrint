@@ -36,6 +36,24 @@
   <icon type="remote" width="416" height="416">http://raw.githubusercontent.com/flathub/com.flashforge.FlashPrint/master/icon.png</icon>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="5.7.0" date="2023-07-24">
+      <description>
+        <ul>
+          <li>Add a new compatible machine type: Guider 3 Ultra.</li>
+          <li>Support limiting the overhang printing speed.</li>
+          <li>Support limiting the printing speed of the part above the linear support.</li>
+          <li>Add the raft function for linear support.</li>
+          <li>Some machine types support setting the acceleration.</li>
+          <li>Support reducing the temperature of the idle extruder during dual-extruder printing.</li>
+          <li>Support setting the retraction parameters separately when switching extruders.</li>
+          <li>Some machine types support setting the linear advance parameters.</li>
+          <li>Support setting the top/bottom layer speed separately.</li>
+          <li>Add the grid infill function.</li>
+          <li>Add Italian.</li>
+          <li>Other function optimization and bug modification.</li>
+        </ul>
+      </description>
+    </release>
     <release version="5.6.1" date="2023-06-08">
       <description>
         <ul>
