@@ -36,6 +36,15 @@
   <icon type="remote" width="416" height="416">http://raw.githubusercontent.com/flathub/com.flashforge.FlashPrint/master/icon.png</icon>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="5.7.1" date="2023-08-18">
+      <description>
+        <ul>
+          <li>Modify the maximum exterior speed limit of Adventurer 4 Series.</li>
+          <li>Fix the compatibility issues with older firmware of Creator 4.</li>
+          <li>Other function optimization and bug modification.</li>
+        </ul>
+      </description>
+    </release>
     <release version="5.7.0" date="2023-07-24">
       <description>
         <ul>
