@@ -36,6 +36,19 @@
   <icon type="remote" width="416" height="416">http://raw.githubusercontent.com/flathub/com.flashforge.FlashPrint/master/icon.png</icon>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="5.8.0" date="2023-09-28">
+      <description>
+        <ul>
+          <li>Add the "Gap to Model" parameter for the brim.</li>
+          <li>Support enabling brim based on the contact area between the model and the build plate</li>
+          <li>Add pre-extrusion at the edges.</li>
+          <li>Add the model splitting function.</li>
+          <li>Support setting the infill density of small areas separately.</li>
+          <li>Add the maximum flow rate parameter.</li>
+          <li>Other function optimization and bug modification.</li>
+        </ul>
+      </description>
+    </release>
     <release version="5.7.1" date="2023-08-18">
       <description>
         <ul>
