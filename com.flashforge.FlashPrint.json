@@ -58,9 +58,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "url": "http://www.ishare3d.com/3dapp/public/FlashPrint-5/FlashPrint/flashprint5_5.8.1_amd64.deb",
-                    "sha256": "5f90ac26625adea190c5d675c60df1a159c8682873c59fc668b645a811367489",
-                    "size": 26955908,
+                    "url": "http://www.ishare3d.com/3dapp/public/FlashPrint-5/FlashPrint/flashprint5_5.8.2_amd64.deb",
+                    "sha256": "56f462c13a188da5ee5443687606eed1b8d1292f2b7d8b24d2273cbd605f679e",
+                    "size": 26957228,
                     "x-checker-data": {
                         "type": "html",
                         "url": "http://www.ishare3d.com/3dapp/public/FlashPrint-5/appInfo1",
