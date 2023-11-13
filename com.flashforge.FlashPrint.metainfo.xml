@@ -36,6 +36,15 @@
   <icon type="remote" width="416" height="416">http://raw.githubusercontent.com/flathub/com.flashforge.FlashPrint/master/icon.png</icon>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="5.8.2" date="2023-11-13">
+      <description>
+        <ul>
+          <li>Adventurer 5M supports camera-related functions.</li>
+          <li>Dimensional Adjustments function is turned off by default.</li>
+          <li>Other function optimization and bug fixes.</li>
+        </ul>
+      </description>
+    </release>
     <release version="5.8.1" date="2023-10-19">
       <description>
         <ul>
