@@ -1,7 +1,7 @@
 {
     "app-id": "com.flashforge.FlashPrint",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-22.08",
+    "runtime-version": "5.15-23.08",
     "sdk": "org.kde.Sdk",
     "command": "FlashPrint",
     "tags": [
@@ -40,6 +40,7 @@
             "build-commands": [
                 "install -D flashprint.sh /app/bin/FlashPrint",
                 "install -D /usr/bin/ar /app/bin/ar",
+                "install -t /app/lib /usr/lib/x86_64-linux-gnu/libsframe.so.1",
                 "install -D /usr/bin/desktop-file-install /app/bin/desktop-file-install",
                 "mkdir -p /app/lib",
                 "ARCH_TRIPLE=$(gcc --print-multiarch) && cp /usr/lib/${ARCH_TRIPLE}/libbfd-*.so /app/lib",
